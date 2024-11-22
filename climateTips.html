@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Tips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tips.css">
+</head>
+<body>
+    <!-- Desktop Navbar -->
+    <header class="navbar-desktop">
+        <div class="logo">
+            <img src="assets/img/Logo-White.png" alt="Logo"/>
+            <h2>Sky Solutions</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="climateTips.html" class="active">Climate Tips</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Mobile Navbar -->
+    <header class="navbar-mobile">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo" onclick="toggleMenu()">
+            <h2>Sky Solutions</h2>
+        </div>
+        <nav id="mobile-menu">
+            <div class="close-menu" onclick="toggleMenu()"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="climateTips.html" class="active">Climate Tips</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="hero" style="background-image: url('assets/img/climateTips.jpg');">
+            <div class="content">
+                <h1>Small Changes, Big Impact<br>Your Guide to a Sustainable Future!</h1>
+                <h2>Discover practical tips and everyday actions to combat climate change. Let's make a difference together, one step at a time.</h2>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="tips">
+            <h1>Tips and Trick</h1>
+            <div class="box-container-tips">
+                <div class="box-tips" onclick="showModal('tips', 'Tips1')">
+                    <span>Mengurangi Konsumsi Energi</span>
+                    <img src="assets/img/tips/box-tips1.png" alt="Energy Tips">
+                </div>
+                <div class="box-tips" onclick="showModal('tips', 'Tips2')">
+                    <span>Transportasi Berkelanjutan</span>
+                    <img src="assets/img/tips/box-tips2.png" alt="Transport Tips">
+                </div>
+                <div class="box-tips" onclick="showModal('tips', 'Tips3')">
+                    <span>Konsumsi Makanan Ramah Lingkungan</span>
+                    <img src="assets/img/tips/box-tips3.png" alt="Food Tips">
+                </div>
+                <div class="box-tips" onclick="showModal('tips', 'Tips4')">
+                    <span>Pengelolaan Limbah</span>
+                    <img src="assets/img/tips/box-tips4.png" alt="Waste Tips">
+                </div>
+                <div class="box-tips" onclick="showModal('tips', 'Tips5')">
+                    <span>Pelestarian Sumber Daya</span>
+                    <img src="assets/img/tips/box-tips5.png" alt="Resource Tips">
+                </div>
+                <div class="box-tips" onclick="showModal('tips', 'Tips6')">
+                    <span>Meningkatkan Kesadaran dan Advokasi</span>
+                    <img src="assets/img/tips/box-tips6.png" alt="Awareness Tips">
+                </div>
+                <div class="box-tips" onclick="showModal('tips', 'Tips7')">
+                    <span>Mendukung Inovasi dan Teknologi</span>
+                    <img src="assets/img/tips/box-tips7.png" alt="Innovation Tips">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal-tips" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-tips')">&times;</span>
+                <img id="modal-image-tips" src="" alt="Tips">
+                <div class="modal-text">
+                    <h3 id="modal-title-tips" class="modal-title"></h3>
+                    <p id="modal-content-tips"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+<footer>
+    <p> Copyright &copy; 2024 Sky Solutions</p>
+</footer>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

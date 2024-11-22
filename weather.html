@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/weather.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="weather-app" id="weather-app">
+        <div class="logo-dekstop">
+            <img src="assets/img/logo-white.png" alt="Logo-dekstop">
+            <h2>Sky Solutions</h2>
+        </div>
+        <header class="navbar-mobile">
+            <div class="logo-mobile">
+                <img src="assets/img/logo-white.png" alt="Logo-mobile" onclick="toggleMenu()">
+                <h2>Sky Solutions</h2>
+            </div>
+            <nav id="mobile-menu">
+                <div class="close-menu" onclick="toggleMenu()"></div>
+                
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="climateTips.html">Climate Tips</a></li>
+                    <li><a href="weather.html" class="active">Weather</a></li>
+                    <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Menu Overlay -->
+         <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div id="temperature" class="temperature"></div>
+            <div id="city" class="city"></div>
+            <div id="date-time" class="date-time"></div>
+            <div class="icon-container">
+                <i id="weather-icon" class="fas icon"></i>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <nav class="navbar-dekstop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="climateTips.html">Climate Tips</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
+                </ul>
+            </nav>
+
+            <hr class="pertama">
+
+            <div class="search-box">
+                <h2  class="search-title" >Search Location</h2>
+                <div class="search-container" id="search-city">
+                    <input type="text" class="search-input" placeholder="Enter city name" id="search-input">
+                    <button id="search-button" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="weather-details">
+                <h2>Weather Details</h2>
+                <div id="weather-description" class="weather-description"></div>
+                
+                <div class="detail-item">
+                    <span>Temp max</span>
+                    <div class="detail-value">
+                        <div id="temp-max"></div>
+                        <i class="fas fa-temperature-high" style="color: #ff6b6b;"></i>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span>Temp min</span>
+                    <div class="detail-value">
+                        <div id="temp-min"></div>
+                        <i class="fas fa-temperature-low" style="color: #4dabf7;"></i>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span>Humidity</span>
+                    <div class="detail-value">
+                        <div id="humidity"></div>
+                        <i class="fas fa-tint" style="color: #4dabf7;"></i>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span>Cloudy</span>
+                    <div class="detail-value">
+                        <div id="cloudiness"></div>
+                        <i class="fas fa-cloud" style="color: #868e96;"></i>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span>Wind</span>
+                    <div class="detail-value">
+                        <div id="wind"></div>
+                        <i class="fas fa-wind" style="color: #868e96;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="forecast">
+                <h2>Weather Forecast</h2>
+                <div class="forecast-container">
+                    <div id="weather-forecast" class="forecast-container">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p> Copyright &copy; 2024 Sky Solutions</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="assets/js/weather.js"></script>
+    <script src="assets/js/main.js"></script>
+</html>
